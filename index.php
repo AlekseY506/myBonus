@@ -1,8 +1,10 @@
 <?php
 include "library.php";
-include "DataBase/start.php";
-//2.Выполнить запрос
-$db = new QueryBuilders($pdo);
+$db = include "DataBase/start.php";
+$db->create("users", [
+    "email" => "administrator",
+    "name"  => "Rekm"
+]);
 $users = $db->getAll('users');
 //4.Вывести чрез foreach
 include "view.php";
