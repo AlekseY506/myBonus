@@ -43,9 +43,9 @@
                 <?php foreach ($users as $user): ?>
                     <tr>
                         <th scope="row"><?=$user['id']?></th>
-                        <td><?=$user['name']?></td>
-                        <td><?=$user['date-register']?></td>
                         <td><?=$user['email']?></td>
+                        <td><?=$user['name']?></td>
+                        <td><?=$user['date_register']?></td>
                         <td><?=$user['status']?></td>
                         <td>
                             <a href="#" class="btn btn-danger">блокировать</a>

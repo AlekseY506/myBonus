@@ -10,9 +10,9 @@ class QueryBuilders
         $this->pdo = $pdo;
     }
 
-    public function getAll()
+    public function getAll($table)
     {
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM {$table}";
         $statement = $this->pdo->prepare($sql);
         $statement->execute();
         //3.Получить ассоциативный массив

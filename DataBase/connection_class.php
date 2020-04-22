@@ -3,8 +3,8 @@
 
 class connection
 {
-    public static function make()
+    public static function make($config)
     {
-        return new PDO('mysql:host=localhost;dbname=poligon_1;charset=utf8;', 'root', '');
+        return new PDO("{$config['host']};dbname={$config['dbname']};charset={$config['charset']};", $config['user'], $config['password']);
     }
 }
